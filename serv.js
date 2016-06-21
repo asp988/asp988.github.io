@@ -9,7 +9,7 @@ const server = new http.Server();
 const staticServer = new StaticServer({
   rootPath: './static',            // required, the root of the server file tree 
   name: 'tickets',   // optional, will set "X-Powered-by" HTTP header 
-  port: 80,               // optional, defaults to a random port 
+  port: 9090,               // optional, defaults to a random port 
   followSymlink: true      // optional, defaults to a 404 error 
 });
  
