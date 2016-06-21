@@ -14,19 +14,19 @@ const staticServer = new StaticServer({
 });
  
 staticServer.start(function () {
-  console.log('Server listening to', server.port);
+  console.log('Server listening to', staticServer.port);
 });
 
-const sequelize = new Sequelize({
-  dialect: "sqlite",
+const sequelize = new Sequelize('d8e53ttnje8l3h', 'xufwaoxfaaqqwx', 'EdjlSQHegUf4aXOp_5Bdu6y0Zl', {
+  host: 'ec2-54-75-238-7.eu-west-1.compute.amazonaws.com',
+  port: '5432',
+  dialect: 'postgres',
 
   pool: {
     max: 5,
     min: 0,
     idle: 10000
-  },
-
-  storage: 'bs.sqlite'
+  }
 });
 
 
