@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link href="css/style.css" rel="stylesheet">
+	<title>test</title>
+</head>
+<body>
+	<section class="ticketapp">
+		<header class="ticketapp-header">
+			<label for="ticketapp-header-searchinput" class="ticketapp-header-searchlabel">Search:</label>
+			<input type="text" id="ticketapp-header-searchinput" class="ticketapp-header-searchinput">
+			<button class="ticketapp-header-newticket" id="ticketapp-header-newticket">New ticket</button>
+			<span class="ticketapp-header-menu">Menu</span>
+		</header>
+		<main class="ticketapp-main">
+			<section class="ticketapp-main-ticketedit">
+				<div action="" class="ticketapp-main-ticketedit-form">
+					<input type="number" class="ticketapp-main-ticketedit-form-numberinput" name="ticketapp-main-ticketedit-form-numberinput" id="ticketapp-main-ticketedit-form-numberinput" placeholder="Номер">
+					<input type="text" class="ticketapp-main-ticketedit-form-subjectinput" name="ticketapp-main-ticketedit-form-subjectinput" id="ticketapp-main-ticketedit-form-subjectinput" placeholder="Наименование">
+					<input type="text" class="ticketapp-main-ticketedit-form-sninput" name="ticketapp-main-ticketedit-form-sninput" id="ticketapp-main-ticketedit-form-sninput" placeholder="Серийный номер">
+					<input type="text" class="ticketapp-main-ticketedit-form-clientnameinput" name="ticketapp-main-ticketedit-form-clientnameinput" id="ticketapp-main-ticketedit-form-clientnameinput" placeholder="Клиент">
+					<input type="tel" class="ticketapp-main-ticketedit-form-phoneinput" name="ticketapp-main-ticketedit-form-phoneinput" id="ticketapp-main-ticketedit-form-phoneinput" placeholder="Телефон">
+					<input type="text" class="ticketapp-main-ticketedit-form-complectinput" name="ticketapp-main-ticketedit-form-complectinput" id="ticketapp-main-ticketedit-form-complectinput" placeholder="Комплектация">
+					<select class="ticketapp-main-ticketedit-form-statusinput" name="ticketapp-main-ticketedit-form-statusinput" id="ticketapp-main-ticketedit-form-statusinput">
+						<option value="">Статус: Принят</option>
+						<option value="">В ремонте</option>
+						<option value="">Готов</option>
+						<option value="">Выдан</option>
+					</select>
+					<textarea  class="ticketapp-main-ticketedit-form-commentinput" name="ticketapp-main-ticketedit-form-commentinput" id="ticketapp-main-ticketedit-form-commentinput" placeholder="Комментарий"></textarea>
+					<input type="text" class="ticketapp-main-ticketedit-form-operationsinput" name="ticketapp-main-ticketedit-form-operationsinput" id="ticketapp-main-ticketedit-form-operationsinput" placeholder="Работы">
+					<input type="text" class="ticketapp-main-ticketedit-form-costinput" name="ticketapp-main-ticketedit-form-costinput" id="ticketapp-main-ticketedit-form-costinput" placeholder="Стоимость">
+					<div class="ticketapp-main-ticketedit-form-dates">
+						<label for="ticketapp-main-ticketedit-form-dates-getdate" class="ticketapp-main-ticketedit-form-dates-getdatelabel">Принят:</label>
+						<input type="text" id="ticketapp-main-ticketedit-form-dates-getdate" class="ticketapp-main-ticketedit-form-dates-getdate">
+						<label for="ticketapp-main-ticketedit-form-dates-donedate" class="ticketapp-main-ticketedit-form-dates-donedatelabel">Выдан:</label>
+						<input type="text" id="ticketapp-main-ticketedit-form-dates-donedate" class="ticketapp-main-ticketedit-form-dates-donedate">
+					</div>
+					<div class="ticketapp-main-ticketedit-form-controls">
+						<button class="ticketapp-main-ticketedit-form-controls-save" id="ticketapp-main-ticketedit-form-controls-save">Сохранить</button>
+						<button class="ticketapp-main-ticketedit-form-controls-printticket" id="ticketapp-main-ticketedit-form-controls-printticket">Квитанция</button>
+						<button class="ticketapp-main-ticketedit-form-controls-printact" id="ticketapp-main-ticketedit-form-controls-printact">Акт</button>
+						<button class="ticketapp-main-ticketedit-form-controls-cancel" id="ticketapp-main-ticketedit-form-controls-cancel">Отмена</button>
+					</div>
+				</div>
+			</section>
+			<ul class="ticketapp-main-record">
+				<li class="ticketapp-main-record-number">1</li>
+				<li class="ticketapp-main-record-subject">Ноутбук Asus k50</li>
+				<li class="ticketapp-main-record-sn">re3rr4rereg</li>
+				<li class="ticketapp-main-record-clientname">Пупкин Петр</li>
+				<li class="ticketapp-main-record-phone">332839783</li>
+				<li class="ticketapp-main-record-status">готов</li>
+			</ul>
+			<ul class="ticketapp-main-record">
+				<li class="ticketapp-main-record-number">1</li>
+				<li class="ticketapp-main-record-subject">Ноутбук Asus k50</li>
+				<li class="ticketapp-main-record-sn">re3rr4rereg</li>
+				<li class="ticketapp-main-record-clientname">Пупкин Петр</li>
+				<li class="ticketapp-main-record-phone">332839783</li>
+				<li class="ticketapp-main-record-status">готов</li>
+			</ul>
+			<ul class="ticketapp-main-record">
+				<li class="ticketapp-main-record-number">1</li>
+				<li class="ticketapp-main-record-subject">Ноутбук Asus k50</li>
+				<li class="ticketapp-main-record-sn">re3rr4rereg</li>
+				<li class="ticketapp-main-record-clientname">Пупкин Петр</li>
+				<li class="ticketapp-main-record-phone">332839783</li>
+				<li class="ticketapp-main-record-status">готов</li>
+			</ul>
+			<ul class="ticketapp-main-record">
+				<li class="ticketapp-main-record-number">1</li>
+				<li class="ticketapp-main-record-subject">Ноутбук Asus k50</li>
+				<li class="ticketapp-main-record-sn">re3rr4rereg</li>
+				<li class="ticketapp-main-record-clientname">Пупкин Петр</li>
+				<li class="ticketapp-main-record-phone">332839783</li>
+				<li class="ticketapp-main-record-status">готов</li>
+			</ul>
+			<ul class="ticketapp-main-record">
+				<li class="ticketapp-main-record-number">1</li>
+				<li class="ticketapp-main-record-subject">Ноутбук Asus k50</li>
+				<li class="ticketapp-main-record-sn">re3rr4rereg</li>
+				<li class="ticketapp-main-record-clientname">Пупкин Петр</li>
+				<li class="ticketapp-main-record-phone">332839783</li>
+				<li class="ticketapp-main-record-status">готов</li>
+			</ul>
+			<ul class="ticketapp-main-record">
+				<li class="ticketapp-main-record-number">1</li>
+				<li class="ticketapp-main-record-subject">Ноутбук Asus k50</li>
+				<li class="ticketapp-main-record-sn">re3rr4rereg</li>
+				<li class="ticketapp-main-record-clientname">Пупкин Петр</li>
+				<li class="ticketapp-main-record-phone">332839783</li>
+				<li class="ticketapp-main-record-status">готов</li>
+			</ul>
+		</main>
+		<footer class="ticketapp-footer"></footer>
+	</section>
+	<script type="text/javascript">
+	(function(){
+		var scripts = [
+			"bower_components/jquery/dist/jquery.min.js",
+			"bower_components/underscore/underscore-min.js",
+			"bower_components/backbone/backbone-min.js",
+			"js/script.min.js"
+		];
+		for (var i = 0, j = scripts.length; i < j; i++){
+	        var script = document.createElement("script");
+	        script.type = "text/javascript";
+	        script.src = scripts[i];
+	        document.body.appendChild(script);
+    	}
+    })();
+    </script>
+</body>
+</html>

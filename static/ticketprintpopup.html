@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link href="css/style.css" rel="stylesheet">
+	<title>test</title>
+</head>
+<body>
+	<script id="ticketprint-template" type="text/template">
+	<section class="ticketprint">
+		<section class="ticketprint-ticket">
+			<header class="ticketprint-ticket-header">
+				<div class="ticketprint-ticket-header-logo">
+					<svg viewBox="0 0 3500 3500">
+						<g>
+							<circle cx="1750" cy="1750" r="1610" stroke="#009846" stroke-width="245" fill="#ffffff" />
+							<text x="985" y="2400" style="font-size:1978px;font-weight:bold;fill:#2e2e2e;font-family:Roboto Condensed;">
+								IT
+							</text>
+							<text x="1080" y="2700" style="font-size:360px;font-weight:300;fill:#2e2e2e;font-family:Roboto Condensed;">
+								сфера
+							</text>
+							<rect width="160" height="149" x="1559" y="2185" style="fill:#2e2e2e;stroke:#2e2e2e;stroke-width:127.27182007;stroke-miterlimit:4" />
+							<rect width="160" height="149" x="2325" y="2185" style="fill:#2e2e2e;stroke:#2e2e2e;stroke-width:127.27182007;stroke-miterlimit:4" />
+						</g>
+					</svg>
+				</div>
+				<section class="ticketprint-ticket-header-about">
+					<span>Сервисный центр "IT сфера"</span>
+					<span>ФЛП Козлов М.Ю.</span>
+					<span>067-724-81-70</span>
+					<span>099-643-59-99</span>
+					<span>063-917-74-26</span>
+				</section>
+				<section class="ticketprint-ticket-header-ticketinfo">
+					<span>Квитанция №<%= number %></span>
+					<span>от <%= getDate %></span>
+				</section>
+			</header>
+			<main class="ticketprint-ticket-main">
+				<ul class="ticketprint-ticket-main-data">
+					<li>Наименование:</li>
+					<li class="ticketprint-ticket-main-data-subject"><%= subject %></li>
+					<li>Серийный номер:</li>
+					<li class="ticketprint-ticket-main-data-sn"><%= sn %></li>
+					<li>Заказчик:</li>
+					<li class="ticketprint-ticket-main-data-clientname"><%= clientname %></li>
+					<li>Контактный телефон:</li>
+					<li class="ticketprint-ticket-main-data-phone"><%= phone %></li>
+					<li>Комплектация:</li>
+					<li class="ticketprint-ticket-main-data-complect"><%= complect %></li>
+				</ul>
+			</main>
+			<footer class="ticketprint-ticket-footer">
+				<section class="ticketprint-ticket-footer-conditions">
+					<span>1.При наличии деталей ремонт осуществляется в течении 3 дней.</span>
+					<span>2.При отсутствии деталей ремонт продлевается на срок до их получения.</span>
+					<span>3.При особо сложных ремонтах, при периодически появляющейся неисправности ремонт может  продлеваться на неопределенный срок, до полного устранения дефектов.</span>
+					<span>4.На устройства, восстановленные после попадания влаги гарантия 2 недели.</span>
+					<span>5.На детали, купленные у третьих лиц, гарантия не распространяется.</span>
+					<span>6.Сервисный центр оставляет за собой право отказа в гарантийном ремонте в случаях: утери акта выполненных работ, наличия механических повреждений, нарушения сохранности пломб, повреждениях, связанных с перепадами в электросети и наличия  следов проникновения влаги.</span>
+					<span>7.При наличии гарантии изделие принимается на экспертизу, срок прохождения 14 дней. В случае обнаружения неисправности по вине сервисного центра гарантийный ремонт осуществляется в течение  14 рабочих дней.</span>
+					<span>8.Оборудование , с согласия клиента принято без  разборки и проверки внутренних неисправностей и повреждений. Клиент согласен, что все обнаруженные в процессе технического обслуживания( ремонта) неисправности возникли до сдачи оборудования в ремонт в сервисный центр.</span>
+					<span>9.Заказчик обязуется забрать и оплатить отремонтированную аппаратуру в оговоренные сроки с момента оповещения о готовности. По истечению 2-х месяцев от указанного срока аппаратура может быть реализована в счет возмещения убытков сервисного центра.</span>
+				</section>
+				<section class="ticketprint-ticket-footer-signs">
+					<span>Представитель СЦ ____________</span>
+					<span>Заказчик ____________</span>
+				</section>
+			</footer>
+		</section>
+		<section class="ticketprint-ticket">
+			<header class="ticketprint-ticket-header">
+				<div class="ticketprint-ticket-header-logo">
+					<svg viewBox="0 0 3500 3500">
+						<g>
+							<circle cx="1750" cy="1750" r="1610" stroke="#009846" stroke-width="245" fill="#ffffff" />
+							<text x="985" y="2400" style="font-size:1978px;font-weight:bold;fill:#2e2e2e;font-family:Roboto Condensed;">
+								IT
+							</text>
+							<text x="1080" y="2700" style="font-size:360px;font-weight:300;fill:#2e2e2e;font-family:Roboto Condensed;">
+								сфера
+							</text>
+							<rect width="160" height="149" x="1559" y="2185" style="fill:#2e2e2e;stroke:#2e2e2e;stroke-width:127.27182007;stroke-miterlimit:4" />
+							<rect width="160" height="149" x="2325" y="2185" style="fill:#2e2e2e;stroke:#2e2e2e;stroke-width:127.27182007;stroke-miterlimit:4" />
+						</g>
+					</svg>
+				</div>
+				<section class="ticketprint-ticket-header-about">
+					<span>Сервисный центр "IT сфера"</span>
+					<span>ФЛП Козлов М.Ю.</span>
+					<span>067-724-81-70</span>
+					<span>099-643-59-99</span>
+					<span>063-917-74-26</span>
+				</section>
+				<section class="ticketprint-ticket-header-ticketinfo">
+					<span>Квитанция №<%= number %></span>
+					<span>от <%= getDate %></span>
+				</section>
+			</header>
+			<main class="ticketprint-ticket-main">
+				<ul class="ticketprint-ticket-main-data">
+					<li>Наименование:</li>
+					<li class="ticketprint-ticket-main-data-subject"><%= subject %></li>
+					<li>Серийный номер:</li>
+					<li class="ticketprint-ticket-main-data-sn"><%= sn %></li>
+					<li>Заказчик:</li>
+					<li class="ticketprint-ticket-main-data-clientname"><%= clientname %></li>
+					<li>Контактный телефон:</li>
+					<li class="ticketprint-ticket-main-data-phone"><%= phone %></li>
+					<li>Комплектация:</li>
+					<li class="ticketprint-ticket-main-data-complect"><%= complect %></li>
+				</ul>
+			</main>
+			<footer class="ticketprint-ticket-footer">
+				<section class="ticketprint-ticket-footer-conditions">
+					<span>1.При наличии деталей ремонт осуществляется в течении 3 дней.</span>
+					<span>2.При отсутствии деталей ремонт продлевается на срок до их получения.</span>
+					<span>3.При особо сложных ремонтах, при периодически появляющейся неисправности ремонт может  продлеваться на неопределенный срок, до полного устранения дефектов.</span>
+					<span>4.На устройства, восстановленные после попадания влаги гарантия 2 недели.</span>
+					<span>5.На детали, купленные у третьих лиц, гарантия не распространяется.</span>
+					<span>6.Сервисный центр оставляет за собой право отказа в гарантийном ремонте в случаях: утери акта выполненных работ, наличия механических повреждений, нарушения сохранности пломб, повреждениях, связанных с перепадами в электросети и наличия  следов проникновения влаги.</span>
+					<span>7.При наличии гарантии изделие принимается на экспертизу, срок прохождения 14 дней. В случае обнаружения неисправности по вине сервисного центра гарантийный ремонт осуществляется в течение  14 рабочих дней.</span>
+					<span>8.Оборудование , с согласия клиента принято без  разборки и проверки внутренних неисправностей и повреждений. Клиент согласен, что все обнаруженные в процессе технического обслуживания( ремонта) неисправности возникли до сдачи оборудования в ремонт в сервисный центр.</span>
+					<span>9.Заказчик обязуется забрать и оплатить отремонтированную аппаратуру в оговоренные сроки с момента оповещения о готовности. По истечению 2-х месяцев от указанного срока аппаратура может быть реализована в счет возмещения убытков сервисного центра.</span>
+				</section>
+				<section class="ticketprint-ticket-footer-signs">
+					<span>Представитель СЦ ____________</span>
+					<span>Заказчик ____________</span>
+				</section>
+			</footer>
+		</section>
+	</section>
+	</script>
+        <script src="js/print.js"></script>
+        <script type="text/javascript">
+        	(function(){
+        		var templateFunction = _.template($("#ticketprint-template").html());
+        		$(window).on("message", function(event){
+        			var data = event.originalEvent.data;
+        			if(data.subject && data.clientname){
+        				$(document.documentElement).append(templateFunction(data));
+        				window.print();
+        			}
+        		})
+        	})();
+        </script>
+</body>
+</html>

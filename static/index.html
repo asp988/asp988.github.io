@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link href="css/style.css" rel="stylesheet">
+        <title>test</title>
+    </head>
+    <body>
+        <section class="ticketapp">
+            <header class="ticketapp-header">
+                <label for="ticketapp-header-searchinput" class="ticketapp-header-searchlabel">Search:</label>
+                <input type="text" id="ticketapp-header-searchinput" class="ticketapp-header-searchinput">
+                <button class="ticketapp-header-newticket">New ticket</button>
+                <button class="ticketapp-header-save">Save</button>
+                <label for="ticketapp-header-loadinput" class="ticketapp-header-load">Load</label>
+                <input type="file" id="ticketapp-header-loadinput" class="ticketapp-header-loadinput">
+            </header>
+            <main id="ticketapp-main" class="ticketapp-main">
+
+            </main>
+            <footer class="ticketapp-footer"></footer>
+        </section>
+
+        <script id="ticket-view-template" type="text/template">
+            <li class="ticketapp-main-record-number"><%= number %></li>
+            <li class="ticketapp-main-record-subject"><%= subject %></li>
+            <li class="ticketapp-main-record-sn"><%= sn %></li>
+            <li class="ticketapp-main-record-clientname"><%= clientname %></li>
+            <li class="ticketapp-main-record-phone"><%= phone %></li>
+            <li class="ticketapp-main-record-status"><%= status %></li>
+            <li class="ticketapp-main-record-remove">удалить</li>
+        </script>
+
+        <script id="ticket-edit-template" type="text/template">
+                <div action="" class="ticketapp-main-ticketedit-form">
+                    <input type="number" class="ticketapp-main-ticketedit-form-numberinput" name="ticketapp-main-ticketedit-form-numberinput" id="ticketapp-main-ticketedit-form-numberinput" placeholder="Номер" value="<%= number %>">
+                    <input type="text" class="ticketapp-main-ticketedit-form-subjectinput" name="ticketapp-main-ticketedit-form-subjectinput" id="ticketapp-main-ticketedit-form-subjectinput" placeholder="Наименование" value="<%= subject %>">
+                    <input type="text" class="ticketapp-main-ticketedit-form-sninput" name="ticketapp-main-ticketedit-form-sninput" id="ticketapp-main-ticketedit-form-sninput" placeholder="Серийный номер" value="<%= sn %>">
+                    <input type="text" class="ticketapp-main-ticketedit-form-clientnameinput" name="ticketapp-main-ticketedit-form-clientnameinput" id="ticketapp-main-ticketedit-form-clientnameinput" placeholder="Клиент" value="<%= clientname %>">
+                    <input type="tel" class="ticketapp-main-ticketedit-form-phoneinput" name="ticketapp-main-ticketedit-form-phoneinput" id="ticketapp-main-ticketedit-form-phoneinput" placeholder="Телефон" value="<%= phone %>">
+                    <input type="text" class="ticketapp-main-ticketedit-form-complectinput" name="ticketapp-main-ticketedit-form-complectinput" id="ticketapp-main-ticketedit-form-complectinput" placeholder="Комплектация" value="<%= complect %>">
+                    <select class="ticketapp-main-ticketedit-form-statusinput" name="ticketapp-main-ticketedit-form-statusinput" id="ticketapp-main-ticketedit-form-statusinput">
+                        <option value="Принят" <%= status==="Принят" ? 'selected' : '' %>>Статус: Принят</option>
+                        <option value="В ремонте" <%= status==="В ремонте" ? 'selected' : '' %>>Статус: В ремонте</option>
+                        <option value="Готов" <%= status==="Готов" ? 'selected' : '' %>>Статус: Готов</option>
+                        <option value="Выдан" <%= status==="Выдан" ? 'selected' : '' %>>Статус: Выдан</option>
+                    </select>
+                    <textarea  class="ticketapp-main-ticketedit-form-commentinput" name="ticketapp-main-ticketedit-form-commentinput" id="ticketapp-main-ticketedit-form-commentinput" placeholder="Комментарий"><%= comment %></textarea>
+                    <input type="text" class="ticketapp-main-ticketedit-form-operationsinput" name="ticketapp-main-ticketedit-form-operationsinput" id="ticketapp-main-ticketedit-form-operationsinput" placeholder="Работы" value="<%= operation%>">
+                    <input type="text" class="ticketapp-main-ticketedit-form-costinput" name="ticketapp-main-ticketedit-form-costinput" id="ticketapp-main-ticketedit-form-costinput" placeholder="Стоимость" value="<%= cost%>">
+                    <div class="ticketapp-main-ticketedit-form-dates">
+                        <label for="ticketapp-main-ticketedit-form-dates-getdate" class="ticketapp-main-ticketedit-form-dates-getdatelabel">Принят:</label>
+                        <input type="text" id="ticketapp-main-ticketedit-form-dates-getdate" class="ticketapp-main-ticketedit-form-dates-getdate" value="<%- getDate %>">
+                        <label for="ticketapp-main-ticketedit-form-dates-donedate" class="ticketapp-main-ticketedit-form-dates-donedatelabel">Выдан:</label>
+                        <input type="text" id="ticketapp-main-ticketedit-form-dates-donedate" class="ticketapp-main-ticketedit-form-dates-donedate" value="<%- doneDate %>">
+                    </div>
+                    <div class="ticketapp-main-ticketedit-form-controls">
+                        <button class="ticketapp-main-ticketedit-form-controls-save" id="ticketapp-main-ticketedit-form-controls-save">Сохранить</button>
+                        <button class="ticketapp-main-ticketedit-form-controls-printticket" id="ticketapp-main-ticketedit-form-controls-printticket">Квитанция</button>
+                        <button class="ticketapp-main-ticketedit-form-controls-printact <%- status !== "Выдан" ? "unactive" : "" %>" id="ticketapp-main-ticketedit-form-controls-printact">Акт</button>
+                        <button class="ticketapp-main-ticketedit-form-controls-cancel" id="ticketapp-main-ticketedit-form-controls-cancel">Отмена</button>
+                    </div>
+                </div>
+        </script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
+        <script src="bower_components/backbone.localStorage/backbone.localStorage.js"></script>
+        <script src="bower_components/FileSaver/FileSaver.js"></script>
+        <script src="js/script.min.js"></script>
+
+    </body>
+</html>

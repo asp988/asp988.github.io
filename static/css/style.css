@@ -1,0 +1,482 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
+/* line 5, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 17, ../sass/style.scss */
+::selection {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
+/* line 22, ../sass/style.scss */
+.ticketapp {
+  font-family: "PT Serif", serif;
+  font-size: 13px;
+  margin: 10px;
+  display: flex;
+  flex-flow: column;
+}
+/* line 29, ../sass/style.scss */
+.ticketapp-header, .ticketapp-footer {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* line 35, ../sass/style.scss */
+.ticketapp-header {
+  margin-bottom: 60px;
+}
+/* line 38, ../sass/style.scss */
+.ticketapp-header-searchinput {
+  box-sizing: border-box;
+  min-height: 20px;
+  padding: 10px;
+  margin: 0 10px;
+  flex: 1;
+  border: none;
+  outline: none;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.4);
+}
+/* line 48, ../sass/style.scss */
+.ticketapp-header-searchinput:focus {
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 51, ../sass/style.scss */
+.ticketapp-header-newticket {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 0;
+  background-color: #6CB163;
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+  font-size: 0px;
+  color: #ffffff;
+  z-index: 1000;
+}
+/* line 67, ../sass/style.scss */
+.ticketapp-header-newticket::before {
+  content: "+";
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+}
+/* line 75, ../sass/style.scss */
+.ticketapp-header-newticket:hover {
+  cursor: pointer;
+  box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 79, ../sass/style.scss */
+.ticketapp-header-newticket:active {
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
+/* line 82, ../sass/style.scss */
+.ticketapp-header-save, .ticketapp-header-load {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #6CB163;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
+/* line 95, ../sass/style.scss */
+.ticketapp-header-save:hover, .ticketapp-header-load:hover {
+  box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 98, ../sass/style.scss */
+.ticketapp-header-save:active, .ticketapp-header-load:active {
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
+/* line 101, ../sass/style.scss */
+.ticketapp-header-loadinput {
+  display: none;
+}
+/* line 105, ../sass/style.scss */
+.ticketapp-main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+}
+/* line 110, ../sass/style.scss */
+.ticketapp-main-record {
+  display: flex;
+  position: relative;
+  flex-flow: wrap;
+  align-items: center;
+  margin: 5px 0;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.4);
+}
+/* line 118, ../sass/style.scss */
+.ticketapp-main-record li {
+  background-color: #F4EA7A;
+}
+/* line 121, ../sass/style.scss */
+.ticketapp-main-record-number, .ticketapp-main-record-subject, .ticketapp-main-record-sn, .ticketapp-main-record-clientname, .ticketapp-main-record-phone, .ticketapp-main-record-status {
+  padding: 10px;
+  flex-basis: 0;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* line 128, ../sass/style.scss */
+.ticketapp-main-record-number {
+  flex-grow: 0;
+  flex-basis: 4%;
+}
+/* line 132, ../sass/style.scss */
+.ticketapp-main-record-remove {
+  display: none;
+}
+/* line 137, ../sass/style.scss */
+.ticketapp-main-record:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.4);
+  transition: 0.1s linear;
+}
+
+/* line 147, ../sass/style.scss */
+.ticketapp.filter .ticketapp-main-record {
+  display: none;
+}
+/* line 150, ../sass/style.scss */
+.ticketapp.filter .ticketapp-main-record.filtered {
+  display: flex;
+}
+
+/* line 1, ../sass/_ticketprint.scss */
+.ticketprint {
+  font-family: "PT Serif", serif;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 10px;
+  display: flex;
+  flex-flow: wrap;
+}
+/* line 9, ../sass/_ticketprint.scss */
+.ticketprint-ticket:first-child {
+  border-right: 1px dashed #000000;
+}
+/* line 13, ../sass/_ticketprint.scss */
+.ticketprint-ticket {
+  position: relative;
+  padding: 2%;
+  flex: 1 200px;
+  display: flex;
+  flex-flow: column;
+}
+/* line 20, ../sass/_ticketprint.scss */
+.ticketprint-ticket-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #000000;
+  font-weight: 700;
+}
+/* line 29, ../sass/_ticketprint.scss */
+.ticketprint-ticket-header-logo {
+  position: absolute;
+  opacity: 0.1;
+  top: 20%;
+  right: 1%;
+  width: 60%;
+}
+/* line 37, ../sass/_ticketprint.scss */
+.ticketprint-ticket-header-about {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+}
+/* line 42, ../sass/_ticketprint.scss */
+.ticketprint-ticket-header-ticketinfo {
+  display: flex;
+  flex-flow: column;
+}
+/* line 48, ../sass/_ticketprint.scss */
+.ticketprint-ticket-main {
+  padding: 8px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #000000;
+}
+/* line 55, ../sass/_ticketprint.scss */
+.ticketprint-ticket-main-data li:nth-child(2n-1) {
+  font-weight: bold;
+}
+/* line 60, ../sass/_ticketprint.scss */
+.ticketprint-ticket-footer {
+  padding: 8px;
+  font-size: 6px;
+  line-height: 8px;
+}
+/* line 65, ../sass/_ticketprint.scss */
+.ticketprint-ticket-footer-conditions {
+  display: flex;
+  flex-flow: column;
+}
+/* line 69, ../sass/_ticketprint.scss */
+.ticketprint-ticket-footer-signs {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 3, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit {
+  position: fixed;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+/* line 13, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form {
+  display: flex;
+  flex-flow: column;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
+/* line 19, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form-dates {
+  display: flex;
+  flex-flow: column;
+}
+/* line 23, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form-dates input, .ticketapp-main-ticketedit-form-dates label {
+  color: #777777;
+}
+/* line 28, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form-controls {
+  display: flex;
+  flex-flow: column;
+}
+/* line 32, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form-controls button.unactive {
+  background-color: #777777;
+}
+/* line 36, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form-controls button {
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #6CB163;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
+/* line 50, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form-controls button:hover {
+  box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 53, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form-controls button:active {
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
+/* line 56, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form-controls button.unactive:hover, .ticketapp-main-ticketedit-form-controls button.unactive:active {
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
+/* line 61, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form input, .ticketapp-main-ticketedit-form select, .ticketapp-main-ticketedit-form textarea, .ticketapp-main-ticketedit-form label {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 50px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  margin-bottom: 1px;
+  font-family: "Roboto", sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+/* line 73, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form label {
+  width: auto;
+  line-height: 20px;
+}
+/* line 77, ../sass/_ticketedit.scss */
+.ticketapp-main-ticketedit-form select {
+  padding-left: 13px;
+}
+
+@media only screen and (min-width: 700px) {
+  /* line 9, ../sass/_desktop.scss */
+  .ticketapp-main-ticketedit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* line 14, ../sass/_desktop.scss */
+  .ticketapp-main-ticketedit-form {
+    max-height: 90vh;
+    overflow-y: auto;
+    flex-basis: auto;
+    flex-shrink: 1;
+  }
+  /* line 20, ../sass/_desktop.scss */
+  .ticketapp-main-ticketedit-form-dates {
+    flex-flow: row;
+  }
+  /* line 24, ../sass/_desktop.scss */
+  .ticketapp-main-ticketedit-form-controls {
+    flex-flow: row;
+  }
+  /* line 35, ../sass/_desktop.scss */
+  .ticketapp-main-record li:nth-child(2n) {
+    background-color: #6CB163;
+  }
+  /* line 38, ../sass/_desktop.scss */
+  .ticketapp-main-record li:nth-child(2n-1) {
+    background-color: #F4EA7A;
+  }
+  /* line 44, ../sass/_desktop.scss */
+  .ticketapp-main-record-remove {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    right: 5px;
+    top: 33%;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    border-radius: 12px;
+    font-size: 0px;
+  }
+  /* line 56, ../sass/_desktop.scss */
+  .ticketapp-main-record-remove::before {
+    display: block;
+    content: "";
+    width: 2px;
+    height: 10px;
+    background-color: #6CB163;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 5px;
+    top: 1px;
+  }
+  /* line 67, ../sass/_desktop.scss */
+  .ticketapp-main-record-remove::after {
+    content: "";
+    width: 2px;
+    height: 10px;
+    background-color: #6CB163;
+    transform: rotate(135deg);
+    position: absolute;
+    left: 5px;
+    top: 1px;
+  }
+  /* line 80, ../sass/_desktop.scss */
+  .ticketapp-main-record:hover .ticketapp-main-record-remove {
+    display: block;
+  }
+  /* line 83, ../sass/_desktop.scss */
+  .ticketapp-main-record:hover .ticketapp-main-record-remove:hover {
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.4);
+  }
+}
+@media only screen and (max-width: 699px) {
+  /* line 7, ../sass/_mobile.scss */
+  .ticketapp-header {
+    margin-bottom: 10px;
+  }
+  /* line 12, ../sass/_mobile.scss */
+  .ticketapp-main-ticketedit {
+    position: absolute;
+    height: 200vh;
+    padding: 5vh 5vw;
+  }
+  /* line 19, ../sass/_mobile.scss */
+  .ticketapp-main-record li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+  }
+  /* line 23, ../sass/_mobile.scss */
+  .ticketapp-main-record-number, .ticketapp-main-record-subject, .ticketapp-main-record-sn, .ticketapp-main-record-clientname, .ticketapp-main-record-phone, .ticketapp-main-record-status {
+    padding: 10px;
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+}
