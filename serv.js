@@ -6,6 +6,7 @@ const Sequelize = require("sequelize");
 
 const server = new http.Server();
 const port = process.env.PORT || 9090;
+console.log(port);
 
 // const staticServer = new StaticServer({
 //   rootPath: './static',            // required, the root of the server file tree 
@@ -75,7 +76,7 @@ const Tickets = sequelize.define('ticket', {
 
 
 
-console.log( server.listen(port) );
+server.listen(port);
 
 server.on("request", function(req, res){
     res.setHeader("Access-Control-Allow-Origin", "*");
