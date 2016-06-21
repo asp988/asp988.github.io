@@ -5,11 +5,12 @@ const http = require("http");
 const Sequelize = require("sequelize");
 
 const server = new http.Server();
+const port = process.env.PORT || 9090;
 
 const staticServer = new StaticServer({
   rootPath: './static',            // required, the root of the server file tree 
   name: 'tickets',   // optional, will set "X-Powered-by" HTTP header 
-  port: 9090,               // optional, defaults to a random port 
+  port: port,               // optional, defaults to a random port 
   followSymlink: true      // optional, defaults to a 404 error 
 });
  
