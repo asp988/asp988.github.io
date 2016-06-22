@@ -1,0 +1,25 @@
+{
+  "name": "Grunt-Sass-Compass-Boilerplate",
+  "description": "",
+  "main": "",
+  "authors": [
+    "asp988 <asp988@ukr.net>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "backbone.localStorage": "~1.1.16",
+    "backbone": "~1.2.3",
+    "jquery": "~2.1.4",
+    "FileSaver": "*"
+  }
+}

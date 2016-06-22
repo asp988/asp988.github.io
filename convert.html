@@ -1,0 +1,33 @@
+<html>
+	<head></head>
+	<body>
+		<textarea name="t" id="t" cols="30" rows="10" style="width:48%"></textarea>
+		<textarea name="u" id="u" cols="30" rows="10" style="width:48%"></textarea>
+		<button id="v" style="width:97%">Gooo</button>
+		<script>
+			var text="", jsn=[], tmp;
+			document.getElementById("v").addEventListener("click", function(e){
+				text = document.getElementById("t").value.replace(/([\s\S\d\D]*?);([\s\S\d\D]*?);([\s\S\d\D]*?);([\s\S\d\D]*?);([\s\S\d\D]*?);([\s\S\d\D]*?)\n/mg, function(){
+					tmp = {
+						"number": arguments[1],
+						"subject": arguments[3],
+						"sn": arguments[5],
+						"clientname": arguments[4],
+						"phone": "0000000000",
+						"complect": "",
+						"status": "Выдан",
+						"comment": arguments[6],
+						"operation": "",
+						"cost": "",
+						"getDate": arguments[2],
+						"doneDate": arguments[2]
+					};
+					jsn.push(tmp);
+					document.getElementById("u").value = JSON.stringify(jsn);
+				});
+			});
+
+
+		</script>
+	</body>
+</html>
