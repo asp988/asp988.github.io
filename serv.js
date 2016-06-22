@@ -1,23 +1,11 @@
 'use strict'
 
-const StaticServer = require('static-server');
 const http = require("http");
 const Sequelize = require("sequelize");
 
 const server = new http.Server();
 const port = process.env.PORT || 9090;
 console.log(port);
-
-// const staticServer = new StaticServer({
-//   rootPath: './static',            // required, the root of the server file tree 
-//   name: 'tickets',   // optional, will set "X-Powered-by" HTTP header 
-//   port: port,               // optional, defaults to a random port 
-//   followSymlink: true      // optional, defaults to a 404 error 
-// });
- 
-// staticServer.start(function () {
-//   console.log('Server listening to', staticServer.port);
-// });
 
 const sequelize = new Sequelize('d8e53ttnje8l3h', 'xufwaoxfaaqqwx', 'EdjlSQHegUf4aXOp_5Bdu6y0Zl', {
   host: 'ec2-54-75-238-7.eu-west-1.compute.amazonaws.com',
