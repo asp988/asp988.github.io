@@ -77,9 +77,11 @@ server.on("request", function(req, res){
     }
 
     if (req.method === "GET"){
-        Tickets.findAll().then(function(db){
-            res.write(JSON.stringify(db));
-            res.end();
+        Tickets.sync().then(function() {
+                Tickets.findAll().then(function(db){
+                res.write(JSON.stringify(db));
+                res.end();
+            })
         });        
     }
 
